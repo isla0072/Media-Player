@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="./img/favicon.png" rel="icon" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel='stylesheet'>
+    <title>My Media Player</title>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    
+  <header>
+  <h1>Rhythm & Rise Player</h1>
+  </header>
+<main>
+  <div class="container">
+  <div class="album_art__full">
+    <img src="./img/emilfull.jpg" alt="full album art" />
+    <button id="btnShuffle" title="shuffle"><i class="material-icons">shuffle</i></button>
+  </div>
+  <ul class="playlist">
+    <li class="track__item">
+      <div class="track__thumb">
+        <img src="./img/triplegofull.png" alt="artist album art thumbnail" />
+      </div>
+      <div class="track__details">
+        <p class="track__title">Game Over</p>
+        <p class="track__artist">Triplego</p>
+      </div>
+      <div class="track__time">
+        <audio src="./media/gameover.mp3"></audio>
+        <time datetime="">03:55</time>
+      </div>
+    </li>
+    <li class="track__item">
+        <div class="track__thumb">
+          <img src="./img/onrafull.png" alt="artist album art thumbnail" />
+        </div>
+        <div class="track__details">
+          <p class="track__title">Secretly</p>
+          <p class="track__artist">Onra</p>
+        </div>
+        <div class="track__time">
+          <audio src="./media/secretly.mp3"></audio>
+          <time datetime="">03:08</time>
+        </div>
+      </li>
+      <li class="track__item">
+        <div class="track__thumb">
+          <img src="./img/vinaifull.png" alt="artist album art thumbnail" />
+        </div>
+        <div class="track__details">
+          <p class="track__title">Rise Up</p>
+          <p class="track__artist">Vinai</p>
+        </div>
+        <div class="track__time">
+          <audio src="./media/riseup.mp3"></audio>
+          <time datetime="">03:02</time>
+        </div>
+      </li> 
+      <li class="track__item">
+        <div class="track__thumb">
+          <img src="./img/artbatfull.png" alt="artist album art thumbnail" />
+        </div>
+        <div class="track__details">
+          <p class="track__title">Horizon</p>
+          <p class="track__artist">Artbat</p>
+        </div>
+        <div class="track__time">
+          <audio src="./media/horizon.mp3"></audio>
+          <time datetime="">07:44</time>
+        </div>
+      </li>
+      <li class="track__item">
+        <div class="track__thumb">
+          <img src="./img/ygpablofull.png" alt="artist album art thumbnail" />
+        </div>
+        <div class="track__details">
+          <p class="track__title">AVM</p>
+          <p class="track__artist">YG Pablo</p>
+        </div>
+        <div class="track__time">
+          <audio src="./media/avm.mp3"></audio>
+          <time datetime="">02:39</time>
+        </div>
+      </li>
+      <li class="track__item">
+        <div class="track__thumb">
+          <img src="./img/burnaboyfull.png" alt="artist album art thumbnail" />
+        </div>
+        <div class="track__details">
+          <p class="track__title">On The Low</p>
+          <p class="track__artist">Burna Boy</p>
+        </div>
+        <div class="track__time">
+          <audio src="./media/onthelow.mp3"></audio>
+          <time datetime="">03:08</time>
+        </div>
+      </li>
+      <li class="track__item">
+        <div class="track__thumb">
+          <img src="./img/emilfull.jpg" alt="artist album art thumbnail" />
+        </div>
+        <div class="track__details">
+          <p class="track__title">Descend</p>
+          <p class="track__artist">Emil Rottmayer</p>
+        </div>
+        <div class="track__time">
+          <audio src="./media/descend.mp3"></audio>
+          <time datetime="">04:13</time>
+        </div>
+      </li>
+  </ul>
+</div>
+</main> 
+<section class="progress">
+  <div class="played"></div>
+</section>
+<footer>
+  <div class="controls">
+    <button id="btnPrev" title="previous track"><i class="material-icons">arrow_back</i></button>
+    <button id="btnPlay" title="play | pause"><i class="material-icons">play_arrow</i></button>
+    <button id="btnNext" title="next track"><i class="material-icons">arrow_forward</i></button>
+  </div>
+  <div class="times">
+    <time datetime="" class="current-time">00:00</time> &nbsp;|&nbsp;
+    <time datetime="" class="total-time">04:13</time>
+  </div>
+  <audio id="player" src="media/descend.mp3"></audio>
+</footer></body></html>
