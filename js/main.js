@@ -51,10 +51,6 @@ const APP = {
         APP.updatePlaylist();
       });
     });
-        
-    const largeImg = document.querySelector('.album_art__full img');
-    largeImg.src = `${MEDIA[APP.currentTrack].large}`;
-    APP.updatePlaylist();
   },
   updatePlaylist: () => {
     
