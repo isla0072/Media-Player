@@ -16,22 +16,6 @@ const MEDIA = [
     large: 'artbatfull.png',
   },
   {
-    artist: 'Vinai',
-    title: 'Rise Up',
-    track: 'riseup.mp3',
-    src: 'riseup.mp3',
-    thumbnail: 'vinaithumb.png',
-    large: 'vinaifull.png',
-  },
-   {
-    artist: 'Onra',
-    title: 'Secretly',
-    track: 'secretly.mp3',
-    src: 'secretly.mp3',
-    thumbnail: 'onrathumb.png',
-    large: 'onrafull.png',
-  },
-  {
     artist: 'Burna Boy',
     title: 'On the Low',
     track: 'onthelow.mp3',
@@ -54,6 +38,22 @@ const MEDIA = [
     src: 'gameover.mp3',
     thumbnail: 'triplegothumb.png',
     large: 'triplegofull.png',
+  },
+  {
+    artist: 'Vinai',
+    title: 'Rise Up',
+    track: 'riseup.mp3',
+    src: 'riseup.mp3',
+    thumbnail: 'vinaithumb.png',
+    large: 'vinaifull.png',
+  },
+  {
+    artist: 'Onra',
+    title: 'Secretly',
+    track: 'secretly.mp3',
+    src: 'secretly.mp3',
+    thumbnail: 'onrathumb.png',
+    large: 'onrafull.png',
   },
 ];
 

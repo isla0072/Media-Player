@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-:root {
-  --primary-color: rgb(26,9,56);
-  --primary-light-color: rgb(54,29,96);
-  --primary-pale-color: rgb(91, 67, 131);
-  --secondary-color: rgb(234,27,161);
-  --tertiary-color: rgb(135, 145, 195);
-  --tertiary-pale-color: rgb(236, 237, 246);
-  --accent-color: rgb(0, 0, 0);
-}
-=======
-
 :root {
     --primary-color: rgb(26,9,56);
     --primary-light-color: rgb(54,29,96);
     --primary-pale-color: rgb(91, 67, 131);
+    --primary-dark-color: rgb(40, 25, 65);
     --secondary-color: rgb(234,27,161);
     --tertiary-color: rgb(135, 145, 195);
     --tertiary-pale-color: rgb(236, 237, 246);
     --accent-color: rgb(0, 0, 0);
   }
->>>>>>> origin/track
 
 /* Box sizing rules */
 *,
@@ -142,6 +130,12 @@ header h1 {
 .container {
     display: flex;
     justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+body.playing .album_art__full {
+  animation: pulse 1s infinite alternate;
+  -webkit-animation: pulse 1s infinite alternate;
 }
 
 .album_art__full {
@@ -164,15 +158,18 @@ header h1 {
     -ms-border-radius: 3rem;
     -o-border-radius: 3rem;
     padding: 10px;
+    animation: fade 1s ease-out both;
+    -webkit-animation: fade 1s ease-out both;
 }
 
 .album_art__full img:hover {
-    transform: rotate(360deg);
+    box-shadow: 0 0 1rem var(--secondary-color);
+    transform: scale(1.1);
     transition: all 0.5s ease-in-out;
 }
 
 .album_art__full button {
-    background-color: var(--primary-light-color);
+    background-color: transparent;
     color: var(--tertiary-pale-color);
     border: none;
     margin-bottom: 1rem;
@@ -187,7 +184,6 @@ header h1 {
     color: var(--secondary-color);
     cursor: pointer;
 }
-
 .playlist {
     flex: 1;
     background-color: var(--primary-color);
@@ -224,6 +220,63 @@ header h1 {
     background: var(--tertiary-pale-color);
 }
 
+@keyframes slide {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    background-color: var(--primary-color);
+  }
+  25% {
+    background-color: var(--primary-pale-color);
+  }
+  50% {
+    background-color: var(--primary-light-color);
+  }
+  75% {
+    background-color: var(--primary-dark-color);
+  }
+}
+
+@keyframes titlePulse {
+  0%, 100% {
+    color: var(--secondary-color);
+  }
+  25% {
+    color: var(--primary-pale-color);
+  }
+  50% {
+    color: var(--secondary-color);
+  }
+  75% {
+    color: var(--primary-dark-color);
+  }
+}
+
+
+body.playing header h1 {
+  animation: titlePulse 1s infinite alternate;
+  -webkit-animation: titlePulse 1s infinite alternate;
+}
 .track__item {
     display: flex;
     align-items: center;
@@ -288,16 +341,25 @@ section.progress {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 section.progress .played {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    background-color:  var(--secondary-color);
-    width: 0;
+     position: absolute;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     background-color:  var(--secondary-color);
+     width: 0;
+     transition: width 0.1s linear;
+     -webkit-transition: width 0.1s linear;
+     -moz-transition: width 0.1s linear;
+     -ms-transition: width 0.1s linear;
+     -o-transition: width 0.1s linear;
+}
+
+.track__item.selected {
+  background-color: var(--primary-pale-color);
 }
 
 footer {
@@ -310,8 +372,7 @@ footer {
     width: 100%;
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
+    z-index: 2;
 }
 
 footer .controls {
