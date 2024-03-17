@@ -21,6 +21,6 @@ Developed as part of the Fullstack: Frontend Development course.
 To explore the media player, visit the deployed GitHub Pages link. Developers interested in contributing or customizing can clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/isla0072/Media-Player>
 # Navigate to the project directory
 cd enhanced-media-player
